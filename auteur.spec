@@ -37,3 +37,10 @@ professional-grade but user-friendly video editor.
 %{python_sitelib}/*
 %{_datadir}/%{name}
 
+
+
+%changelog
+* Fri Feb 17 2012 Andrey Bondrov <abondrov@mandriva.org> 0.1a7-1
++ Revision: 776041
+- imported package auteur
+
