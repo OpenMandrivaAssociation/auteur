@@ -1,46 +1,41 @@
+Summary:	Lightweight video editor powered by mplayer and mencoder
 Name:		auteur
 Version:	0.1a7
-Release:	%mkrel 1
-Summary:	Lightweight video editor powered by mplayer and mencoder
+Release:	2
+License:	GPLv3+
 Group:		Video
-License:	GPLv3
-URL:		http://auteur-editor.info
+Url:		http://auteur-editor.info
 Source0:	http://auteur-editor.info/releases/source_tarballs/%{name}-%{version}.tar.gz
-BuildRequires:	python-devel
+Patch0:		auteur-0.1a7-desktop.patch
+BuildRequires:	pkgconfig(python)
+Requires:	mencoder
+Requires:	mplayer
 Requires:	PyQt4
 Requires:	python-qt4-qscintilla
-Requires:	mplayer
-Requires:	mencoder
+BuildArch:	noarch
 
 %description
 The Auteur Non-Linear Editor is a project seeking to create a
 professional-grade but user-friendly video editor.
 
-%prep
-%setup -q
-
-%build
-%__python setup.py build
-
-%install
-%__rm -rf %{buildroot}
-%__python setup.py install --root=%{buildroot}
-
-%clean
-%__rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %{_bindir}/*
-%{_datadir}/applications/*.desktop
+%{_datadir}/applications/%{name}.desktop
+%{_datadir}/%{name}
 %{_iconsdir}/hicolor/*/apps/%{name}.*
 %{python_sitelib}/*
-%{_datadir}/%{name}
 
+#----------------------------------------------------------------------------
 
+%prep
+%setup -q
+%patch0 -p1
 
-%changelog
-* Fri Feb 17 2012 Andrey Bondrov <abondrov@mandriva.org> 0.1a7-1
-+ Revision: 776041
-- imported package auteur
+%build
+python setup.py build
+
+%install
+python setup.py install --root=%{buildroot}
+
+mv %{buildroot}%{_datadir}/applications/Auteur.desktop %{buildroot}%{_datadir}/applications/%{name}.desktop
 

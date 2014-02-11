@@ -1,0 +1,15 @@
+diff -urN auteur-0.1a7/bin/Auteur.desktop auteur-0.1a7-patched/bin/Auteur.desktop
+--- auteur-0.1a7/bin/Auteur.desktop	2011-01-27 08:21:17.000000000 +1000
++++ auteur-0.1a7-patched/bin/Auteur.desktop	2014-02-12 01:56:59.747439371 +1100
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env xdg-open
+ [Desktop Entry]
+ Version=1.0
+ Name=Auteur
+@@ -9,5 +8,5 @@
+ Terminal=false
+ Type=Application
+ MimeType=application/x-auteur;
+-Categories=QT;AudioVideo;AudioVideoEditing;
++Categories=Qt;AudioVideo;AudioVideoEditing;
+ Name[en_GB]=Auteur
