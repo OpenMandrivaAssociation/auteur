@@ -1,7 +1,7 @@
 Summary:	Lightweight video editor powered by mplayer and mencoder
 Name:		auteur
 Version:	0.1a7
-Release:	2
+Release:	3
 License:	GPLv3+
 Group:		Video
 Url:		http://auteur-editor.info
