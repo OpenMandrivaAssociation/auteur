@@ -4,7 +4,7 @@ Version:	0.1a7
 Release:	3
 License:	GPLv3+
 Group:		Video
-Url:		http://auteur-editor.info
+Url:		https://auteur-editor.info
 Source0:	http://auteur-editor.info/releases/source_tarballs/%{name}-%{version}.tar.gz
 Patch0:		auteur-0.1a7-desktop.patch
 BuildRequires:	pkgconfig(python)
